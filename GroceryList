@@ -1,0 +1,70 @@
+package com.example.firsttime;
+import java.util.Scanner;
+
+import static java.lang.System.out;
+
+
+public class GroceryList {
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        String item1;
+        String item2;
+        String item3;
+        float priceOne;
+        //priceOne = 0;
+        float priceTwo;
+        //priceTwo = 0;
+        float priceThree;
+        //priceThree = 0;
+        int q1;
+        //q1 = 0;
+        int q2;
+        //q2 = 0;
+        int q3;
+        //q3 = 0;
+        float total = 0;
+
+        out.println("Please list three items on your grocery shopping list.");
+        out.println("Item 1?");
+        item1 = keyboard.nextLine();
+        out.println("Item 2?");
+        item2 = keyboard.nextLine();
+        out.println("Item 3?");
+        item3 = keyboard.nextLine();
+
+        out.println("Now, please enter the quantity of each item.");
+        out.println("How many" + item1 + "?");
+        q1 = keyboard.nextInt();
+        out.println("How many" + item2 + "?");
+        q2 = keyboard.nextInt();
+        out.println("How many" + item3 + "?");
+        q3 = keyboard.nextInt();
+
+        out.println("Now, please enter the price of each item.");
+
+        out.println("How much does one" + item1 + "cost?");
+        priceOne = keyboard.nextFloat();
+        out.println("How much does one" + item2 + "cost?");
+        priceTwo = keyboard.nextFloat();
+        out.println("How much does one" + item3 + "cost?");
+        priceThree = keyboard.nextFloat();
+
+        out.println("Calculating your grocery bill.");
+
+        out.println("Your total cost is " + total);
+        total = keyboard.nextFloat();
+        if (total > 100) {
+            out.println(total + "is a really big bill!");
+        } else {
+            out.println("Your total cost is " + total);
+            for (total = 0; total < 100; total++ ); {
+                out.println("x");
+            }
+        }
+
+
+
+
+
+    }
+}
