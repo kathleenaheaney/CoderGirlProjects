@@ -22,7 +22,7 @@ public class GroceryList {
         //q2 = 0;
         int q3;
         //q3 = 0;
-        float total = 0;
+        float total;
 
         out.println("Please list three items on your grocery shopping list.");
         out.println("Item 1?");
@@ -33,38 +33,27 @@ public class GroceryList {
         item3 = keyboard.nextLine();
 
         out.println("Now, please enter the quantity of each item.");
-        out.println("How many" + item1 + "?");
+        out.println("How many " + item1 + " ?");
         q1 = keyboard.nextInt();
-        out.println("How many" + item2 + "?");
+        out.println("How many " + item2 + " ?");
         q2 = keyboard.nextInt();
-        out.println("How many" + item3 + "?");
+        out.println("How many " + item3 + " ?");
         q3 = keyboard.nextInt();
 
         out.println("Now, please enter the price of each item.");
 
-        out.println("How much does one" + item1 + "cost?");
+        out.println("How much does one " + item1 + " cost?");
         priceOne = keyboard.nextFloat();
-        out.println("How much does one" + item2 + "cost?");
+        out.println("How much does one " + item2 + " cost?");
         priceTwo = keyboard.nextFloat();
-        out.println("How much does one" + item3 + "cost?");
+        out.println("How much does one " + item3 + " cost?");
         priceThree = keyboard.nextFloat();
 
         out.println("Calculating your grocery bill.");
+        total = priceOne * q1 + priceTwo * q2 + priceThree * q3;
+        out.printf("Your total cost is %.2f", total);
+                    total = keyboard.nextFloat();
 
-        out.println("Your total cost is " + total);
-        total = keyboard.nextFloat();
-        if (total > 100) {
-            out.println(total + "is a really big bill!");
-        } else {
-            out.println("Your total cost is " + total);
-            for (total = 0; total < 100; total++ ); {
-                out.println("x");
-            }
         }
 
-
-
-
-
     }
-}
