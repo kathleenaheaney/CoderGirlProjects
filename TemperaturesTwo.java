@@ -50,7 +50,8 @@ public class TemperaturesTwo {
             double threeAmAverage = threeAmRowTotal/4;
 
         int total=sum(temps);
-        double totalAverage = (sundayAverage+mondayAverage+tuesdayAverage+wednesdayAverage+thursdayAverage+fridayAverage+saturdayAverage)/7;
+
+        double totalAverage = total/28;
 
         System.out.println("Temperature Calculator\n");
         System.out.println("The data provided are: \n");
@@ -79,10 +80,7 @@ public class TemperaturesTwo {
 
         System.out.println("Overall: " + totalAverage);
 
-
-
-
-    }
+        }
 
     public static void display(int temps[][]) {
         for (int row = 0; row < temps.length; row++) {
@@ -97,11 +95,13 @@ public class TemperaturesTwo {
     public static int sum(int[][] values) {
         int total = 0;
         for (int i = 0; i < values.length; i++) {
-            for (int j = 0; j < values.length; j++) {
+            for (int j = 0; j < values[i].length; j++) {
                 total += values[i][j];
             }
         }
+
         return total;
+
     }
 
 }
