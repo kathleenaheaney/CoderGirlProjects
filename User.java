@@ -9,13 +9,11 @@ public class User {
     private String lastName;
     private String emailAddress;
 
-    private ArrayList<Post> posts = new ArrayList<Post>();
+    private ArrayList posts = new ArrayList();
 
     public User(Post p) {
         posts.add(p);
     }
-
-
 
     public User(String avatarPicture, String userName, String firstName, String lastName, String emailAddress) {
         this.avatarPicture = avatarPicture;
@@ -33,9 +31,9 @@ public class User {
     public String getUserName() {
         return userName;
     }
-
-    public ArrayList<Post> getPosts() {
-        return posts;
+    public String getEmailAddress()
+    {
+        return emailAddress;
     }
 
 }
